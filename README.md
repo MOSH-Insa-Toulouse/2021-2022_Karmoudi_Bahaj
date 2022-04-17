@@ -101,6 +101,8 @@ Notre code Arduino nous permet d'afficher un menu sur l'OLED, de naviguer dans c
 
 Ci-joint notre code complet : [Code_Projet_Capteur](https://github.com/Imane-Karmoudi/2021-2022_Bahaj_Karmoudi/tree/main/Code_Projet_Capteur) 
 
+- Bibliothèques utilisées : "Adafruit GFX Library" , "Adafruit SSD1306" , "SoftwareSerial library"
+
 ## 4. Application Bluetooth
 
 L'application conçue nous permet tout d'abord de détecter si la connexion avec notre PCB est établie ou non, puis de recevoir sur notre smartphone la valeur de la tension délivré par le capteur ainsi que la valeur de la résistance à ses bornes. En plus de nous afficher en temps réel la valeur de ces deux grandeurs, l'application trace un graphique de la variation de la résitance en fonction du temps. 
