@@ -35,6 +35,11 @@ Durant ce projet, nous avons été amenés à concevoir un capteur à jauge de c
 - Un écran OLED
 - Deux pinces crocodiles en cuivre pour attacher le capteur au PCB
 - Un amplificateur opérationnel LTC1050  
+- 3 condensateurs de 100nf
+- 1 condensateur de 1µF
+- 2 résistances de 100kΩ
+- 1 résistance de 10kΩ
+- 1 résistance de 1kΩ
 - Smartphone Android
 
 ### 1.2 Livrables
@@ -42,14 +47,14 @@ Durant ce projet, nous avons été amenés à concevoir un capteur à jauge de c
 Les livrables du projet sont comme suit : 
 
 - Un shield PCB contenant un circuit amplificateur transimpédance, un module bluetooth, un écran OLED et un encodeur rotatoire
-- Un code Arduino qui permet d'afficher un menu sur l'OLED, de naviguer dans ce même menu grâce à un encodeur rotatoire, d'afficher les mesures de la déformation récoltés sur l'OLED en fonction de l'option d'affichage choisie auparvant, et de les envoyer vers notre Android grâce au module bluetooth
+- Un code Arduino
 - Une application Android APK qui nous affiche l'état de connexion, nous affiche les valeurs de la tension et de la résistance ainsi qu'une courbe de la résistance aux bornes du capteur en fonction du temps
-- Un banc de test (à determiner)
+- Un banc de test
 - Une datasheet détaillant les caractéristiques du capteur
 
 ## 2. Kicad 
 
-Kicad est un logiciel de conception pour l'électronique qui a permis dans notre cas de créer le Shield pour la carte Arduino UNO. Toutes nos empreintes et plans de notre shield sont disponibles dans [notre-git] (penser à mettre le site).
+Kicad est un logiciel de conception pour l'électronique qui a permis dans notre cas de créer le Shield pour la carte Arduino UNO. Toutes nos empreintes et plans de notre shield sont disponibles dans notre [kiCad](https://github.com/MOSH-Insa-Toulouse/2021-2022_Karmoudi_Bahaj/blob/main/KiCad.zip) 
 
 ### 2.1 Schématique complète
 
@@ -92,6 +97,8 @@ Après avoir fini la schématique et créer les empreintes des différents compo
 
 ## 3. Code Arduino
 
+Notre code Arduino nous permet d'afficher un menu sur l'OLED, de naviguer dans ce même menu grâce à un encodeur rotatoire, d'afficher les mesures de la déformation récoltés sur l'OLED en fonction de l'option d'affichage choisie auparvant, et de les envoyer vers notre Android grâce au module bluetooth.
+
 Ci-joint notre code complet : [Code_Projet_Capteur](https://github.com/Imane-Karmoudi/2021-2022_Bahaj_Karmoudi/tree/main/Code_Projet_Capteur) 
 
 ## 4. Application Bluetooth
@@ -101,7 +108,11 @@ L'application conçue nous permet tout d'abord de détecter si la connexion avec
 [CodeAPK]
 
 
-## 5. Banc de test
+## 5. Banc de test 
+
+Afin d'étudier les variations relatives de résistance de notre capteur de déformation à base de graphite, nous avons réalisé un banc de test. Le but étant de déterminer la sensibilité du capteur aux différents type de crayons à papier qui sont par ailleurs classées selon leur concentration en graphite (6B,B,HB/2). 
+
+Pour une description détaillée du protocole suivi, du matériel nécessaire, ainsi que l'analyse de nos résultats, je vous invite à lire le document suivant : [Banc de test](https://github.com/MOSH-Insa-Toulouse/2021-2022_Karmoudi_Bahaj/tree/main/Banc%20de%20test)  
 
 ## 6. Datasheet 
 
