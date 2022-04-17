@@ -50,6 +50,8 @@ Adafruit_SSD1306 OLED(Width, Height, &Wire, Reset);
   switch: detects if the button of the encoder is pressed and returns how many times it was pressed
   R_Display : displays the value of the resistance
   V_Display : displays the value of the voltage
+  StartScreen 
+  Menu
 */
 
 void spinEncoder() {
@@ -88,7 +90,6 @@ int Switch() {
 
 void V_Display (float u)
 {
-
   OLED.clearDisplay();
   OLED.setTextSize(2);
   OLED.setTextColor(WHITE);
@@ -198,33 +199,39 @@ void setup() {
   Serial.println(F("System initialized"));
 
  //Initializing the rotary encoder
-      pinMode(clkPin, INPUT);
-      pinMode(dtPin, INPUT);
-      pinMode(swPin, INPUT_PULLUP);
+  pinMode(clkPin, INPUT);
+  pinMode(dtPin, INPUT);
+  pinMode(swPin, INPUT_PULLUP);
 
   //Initializing the bluetooth
-      pinMode(rxPin, INPUT);
-      pinMode(txPin, OUTPUT);
-      MyPhone.begin(baudrate);
+  pinMode(rxPin, INPUT);
+  pinMode(txPin, OUTPUT);
+  MyPhone.begin(baudrate);
 
-     //Initialisation the OLED screen
-      OLED.begin(SSD1306_SWITCHCAPVCC, Address);
-      OLED.clearDisplay();
-      StartScreen();
-      delay(10000);  
+  //Initialisation the OLED screen
+  OLED.begin(SSD1306_SWITCHCAPVCC, Address);
+  OLED.clearDisplay();
+  StartScreen();
+  delay(3000);  
 
-    attachInterrupt(digitalPinToInterrupt(clkPin), spinEncoder, CHANGE); 
-     attachInterrupt(digitalPinToInterrupt(swPin), Switch, CHANGE);
-  
+  attachInterrupt(digitalPinToInterrupt(clkPin), spinEncoder, CHANGE); 
+  attachInterrupt(digitalPinToInterrupt(swPin), Switch, CHANGE);
+
 }
 
 //=============================================================
 
 void loop() {
-
-  float Voltage = (analogRead(Pin)*5)/1023;
+  
+  float Voltage = analogRead(Pin)*5.0/1024.0 ; //4.88e-3; 
+  
+  if (Voltage <= 0.05){
+    Voltage = 0.00 ;
+  }
+  
   float Rsensor=((1.0+(R3/R2))*R1*(vcc/Voltage)-R1-R5)/1.0e6; 
-
+  MyPhone.write(Voltage/4.0);
+  
   spinEncoder();
   Switch();
 
@@ -239,7 +246,6 @@ void loop() {
         if (!(Switch() == 0)) {
           if (Switch() % 2 == 1) {
               R_Display(Rsensor);
-              //MyPhone.write(Rsensor);
           } else if (Switch() % 2 == 0) { 
               Menu0() ;
           }
@@ -250,7 +256,6 @@ void loop() {
         if (!(Switch() == 0)) {
           if (Switch() % 2 == 1) {
               V_Display(Voltage);
-              MyPhone.write(Voltage);
           } else if (Switch() % 2 == 0) { 
               Menu1() ;
           }
