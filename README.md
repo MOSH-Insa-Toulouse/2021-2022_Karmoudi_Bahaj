@@ -6,7 +6,7 @@
 
 ## Description 
 
-Durant ce projet, nous avons été amenés à concevoir un capteur à jauge de contrainte à base de graphite développé afin de mesurer la résistance en fonction de la courbure appliquée. Une couche de graphite est déposé sur un bout de papier, ce dépôt étant un système granuleux, il existe donc une relation entre la conductivité électrique et l'espace entre les nanoparticules de graphite. Nous avons donc exploité cette propriété afin de relever la variation de la résistance induite par la traction ou la compression du réseau percolé. Pendant ce projet, nous avons été amenés à faire design, la conception et le codage.
+Durant ce projet, nous avons été amenés à concevoir un capteur à jauge de contrainte à base de graphite développé afin de mesurer la résistance en fonction de la courbure appliquée. Une couche de graphite est déposé sur un bout de papier, ce dépôt étant un système granuleux, il existe donc une relation entre la conductivité électrique et l'espace entre les nanoparticules de graphite. Nous avons donc exploité cette propriété afin de relever la variation de la résistance induite par la traction ou la compression du réseau percolé. Pendant ce projet, nous avons été amenés à faire le design, la conception et le codage.
 
 ## Sommaire
 
@@ -54,7 +54,7 @@ Les livrables du projet sont comme suit :
 
 ## 2. Kicad 
 
-Kicad est un logiciel de conception pour l'électronique qui a permis dans notre cas de créer le Shield pour la carte Arduino UNO. Toutes nos empreintes et plans de notre shield sont disponibles dans notre [kiCad](https://github.com/MOSH-Insa-Toulouse/2021-2022_Karmoudi_Bahaj/blob/main/KiCad.zip) 
+Kicad est un logiciel de conception pour l'électronique qui a permis dans notre cas de créer le Shield pour la carte Arduino UNO. Toutes nos empreintes et plans de notre shield sont disponibles dans notre [kiCad](https://github.com/MOSH-Insa-Toulouse/2021-2022_Karmoudi_Bahaj/blob/main/KiCad.zip).
 
 ### 2.1 Schématique complète
 
