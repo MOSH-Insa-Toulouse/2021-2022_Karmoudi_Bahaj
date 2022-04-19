@@ -99,7 +99,7 @@ Après avoir fini la schématique et créer les empreintes des différents compo
 
 Notre code Arduino nous permet d'afficher un menu sur l'OLED, de naviguer dans ce même menu grâce à un encodeur rotatoire, d'afficher les mesures de la déformation récoltés sur l'OLED en fonction de l'option d'affichage choisie auparvant, et de les envoyer vers notre Android grâce au module bluetooth.
 
-Ci-joint notre code complet : [Code_Projet_Capteur](https://github.com/Imane-Karmoudi/2021-2022_Bahaj_Karmoudi/tree/main/Code_Projet_Capteur) 
+Ci-joint notre code complet : [Code_Projet_Capteur](https://github.com/MOSH-Insa-Toulouse/2021-2022_Karmoudi_Bahaj/tree/main/Code_Projet_Capteur) 
 
 - Bibliothèques utilisées : "Adafruit GFX Library" , "Adafruit SSD1306" , "SoftwareSerial library"
 
@@ -119,7 +119,7 @@ Pour une description détaillée du protocole suivi, du matériel nécessaire, a
 
 ## 6. Datasheet 
 
-Ci-joint la Datasheet détaillant les différentes caractéristiques du capteur : [Datasheet](https://github.com/Imane-Karmoudi/2021-2022_Bahaj_Karmoudi/blob/main/Datasheet.pdf) 
+Ci-joint la Datasheet détaillant les différentes caractéristiques du capteur : [Datasheet](https://github.com/MOSH-Insa-Toulouse/2021-2022_Karmoudi_Bahaj/blob/main/Datasheet.pdf) 
 
 ## 7. Contact
 
